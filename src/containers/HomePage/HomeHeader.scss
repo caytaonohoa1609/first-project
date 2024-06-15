@@ -16,9 +16,10 @@
             
 
             .header-logo {
-                //background: url('../../assets/Logo.png') center center no-repeat;
-                height: 100%;
-                width: 100%;
+                background: url('../../assets/Logo.png') center center no-repeat;
+                background-size: contain;
+                height: 90%;
+                width: 90%;
                 cursor: pointer;
             }   
             i {
@@ -50,6 +51,105 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+    }
+}
+
+.home-header-banner {
+    background: url('../../assets/mental-health-concept-3012797-2509210.png');
+    height: 485px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+
+    .content-up {
+        border: 1px solid red;
+        height: 50%;
+        padding-top: 15px;
+
+        .title1 {
+            text-align: center;
+            font-size: 30px;
+            text-shadow: 1px 1px 1px #333;
+            margin-bottom: 5px;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .title2 {
+            text-align: center;
+            font-size: 30px;
+            text-shadow: 1px 1px 1px #333;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .search {
+            width: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 25px;
+            background: #f7d800;
+
+            i {
+                margin: 0 5px;
+            }
+
+            input {
+                height: 30px;
+                width: 360px;
+                background: transparent;
+                border: none;
+                outline: none;
+            }
+        }
+
+    }
+    
+    .content-down {
+        border: 1px solid purple;
+        height: 50%;
+
+        .options {
+            gap: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            
+            .option-child {
+                border: 1px solid red;
+                width: 100px;
+
+                .icon-child{
+                    background: white;
+                    width: 40px;
+                    height: 40px;
+                    padding: 10px 0.25px 10px 0;
+                    border-radius: 50%;
+                    text-align: center;
+                    margin: 0 auto;
+
+                    i {
+                        color: #49bce2; 
+                        font-size: 20px;
+                    }
+                }
+
+                .text-child {
+                    font-size: 17px;
+                    font-weight: 500;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #49bce2; 
+                    }
+                }
+            }
         }
     }
 }
