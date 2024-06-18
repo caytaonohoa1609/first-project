@@ -133,7 +133,7 @@ class UserManage extends Component {
                     />    
                 }
                 <div className='title text-center'>
-                    Manage users with Hank
+                    User Manage with hank
                 </div>
                 <div className='mx-1'>
                     <button 
