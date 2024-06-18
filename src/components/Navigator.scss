@@ -30,6 +30,12 @@
             position: absolute;
             padding: 0;
             .menu {
+                &.active {
+                    a {
+                        color: orange;
+                    }
+                    background-color: #ededed;
+                }
                 width: 205px;
                 padding: 0 15px;
                 height: 35px;
