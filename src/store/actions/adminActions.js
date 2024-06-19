@@ -1,5 +1,5 @@
 import actionTypes from './actionTypes';
-import { getAllCodeService } from '../../services/userService';
+import { getAllCodeService, createNewUserService } from '../../services/userService';
 
 
 // export const fetchGenderStart = () => ({
@@ -94,6 +94,33 @@ export const fetchRoleStart = () => {
         }
     }
 }
+
+export const createNewUser = (data) => {
+    return async (dispath, getState) => {
+        try {
+            let res = await createNewUserService(data);
+            console.log('check create user redux: ', res)
+            if(res && res.errCode === 0) {
+                dispath(saveUserSuccess());
+            }
+            else
+            {
+                dispath(saveUserFailed());
+            }
+        }catch(e) {
+            dispath(saveUserFailed());
+            console.log('fetchRoleFailed error', e)
+        }
+    }
+}
+
+export const saveUserSuccess = () => ({
+    type: 'CREATE_USER_SUCCESS'
+})
+
+export const saveUserFailed = () => ({
+    type: 'CREATE_USER_FAILED'
+})
 
 
 //start doing end
