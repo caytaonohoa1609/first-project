@@ -35,6 +35,10 @@
     }
 }
 
+.slick-disabled {
+    display: none !important;
+}
+
 .slick-next:before {
     font-family: FontAwesome !important;
 
