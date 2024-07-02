@@ -3,11 +3,12 @@ export const path = {
     HOMEPAGE: '/home',
     LOGIN: '/login',
     LOG_OUT: '/logout',
-    SYSTEM: '/system'
+    SYSTEM: '/system',
+    DETAIL_DOCTOR: '/detail-doctor/:id'
 };
 
 export const LANGUAGES = {
-    VI: 'vi',
+    VI: 'vi',   
     EN: 'en'
 };
  
