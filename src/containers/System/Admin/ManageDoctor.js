@@ -171,7 +171,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchAllDocTors: (id) => dispatch(actions.fetchAllDocTors()),
+        fetchAllDocTors: () => dispatch(actions.fetchAllDocTors()),
         saveDetailDoctor: (data) => dispatch(actions.saveDetailDoctor(data))
     };
 };
