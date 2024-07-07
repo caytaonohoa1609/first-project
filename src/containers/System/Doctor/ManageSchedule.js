@@ -8,7 +8,8 @@ import {CRUD_ACTIONS, LANGUAGES, dateFormat} from '../../../utils';
 import DatePicker from '../../../components/Input/DatePicker';
 import moment from 'moment';
 import { toast } from 'react-toastify';
-import _, { values } from 'lodash';
+import _ from 'lodash';
+import { saveBulkScheduleDoctor } from '../../../services/userService';
 
 
 class ManageSchedule extends Component {
@@ -99,7 +100,7 @@ class ManageSchedule extends Component {
         }
     }
 
-    handleSaveSchedule = () => {
+    handleSaveSchedule = async () => {
         let { rangeTime, selectedDoctor, currentDate } = this.state;
         let result = [];
         if(!currentDate) {
@@ -110,21 +111,23 @@ class ManageSchedule extends Component {
             toast.error('Invalid select doctor!');
             return;
         }
-        let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
+
+
+
+        // let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
+        //  = moment(currentDate).unix();
+         let formatedDate = new Date(currentDate).getTime();
 
         if(rangeTime && rangeTime.length > 0) {
             let selectdTime = rangeTime.filter(item => item.isSelected === true);
             if(selectdTime && selectdTime.length > 0) {
                 selectdTime.map((schedule, index) => {
-                console.log('check schedule ', schedule, index, selectdTime)
-
                     let object = {};
                     object.doctorId = selectedDoctor.value;
                     object.date = formatedDate;
-                    object.time = schedule.keyMap;
-                    result.push();
+                    object.timeType = schedule.keyMap;
+                    result.push(object);
                 })
-                let onject = {}
             }else {
                 toast.error("Invalid selected time!");
                 return;
@@ -132,6 +135,11 @@ class ManageSchedule extends Component {
 
         }
 
+        let res = await saveBulkScheduleDoctor({
+            arrSchedule: result,
+            doctorId: selectedDoctor.value,
+            formatedDate: formatedDate
+        })
 
     }
 
