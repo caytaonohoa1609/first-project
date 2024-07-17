@@ -24,9 +24,13 @@
 
         .short-infor {
 
-            span {
+            .detail {
                 cursor: pointer;
                 color: #337ab7;
+            }
+
+            .currency {
+                margin: 0 5px;
             }
         }
 
@@ -61,7 +65,7 @@
         .hide-price {
             margin-top: 10px;
 
-            span {
+            .detail {
                 cursor: pointer;
                 color: #337ab7;
             }
