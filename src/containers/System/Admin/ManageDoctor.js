@@ -128,8 +128,6 @@ class ManageDoctor extends Component {
             contentMarkdown: text,
             contentHTML: html,
         })
-        console.log('handleEditorChange', html, text);
-
     }
 
     handleSaveContentMarkdown = () => {
