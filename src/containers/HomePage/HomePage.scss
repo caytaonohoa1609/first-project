@@ -77,7 +77,7 @@
                 background-color: #eee;
 
                 &.section-specialty {
-                    background-image: url('../../assets/specialty/co-xuong-khop.jpg');    
+                    // background-image: url('../../assets/specialty/co-xuong-khop.jpg');    
                     background-size: cover;
                 }
 
@@ -97,6 +97,14 @@
                 &.section-handbook {
                     background-image: url('../../assets/handbook/handbook.png');
                     background-size: cover;
+                }
+            }
+            .specialty-name {
+                text-align: center;
+                padding: 10px 0;
+
+                &:hover {
+                    color: #45c3d2;
                 }
             }
         }
