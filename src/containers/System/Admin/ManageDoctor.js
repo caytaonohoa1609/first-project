@@ -176,9 +176,9 @@ class ManageDoctor extends Component {
             let markdown = res.data.Markdown;
             let { listPayment, listPrice, listProvince, listSpecialty } = this.state;
             let addressClinic = '', nameClinic = '', note = '',
-            paymentId = '', priceId = '', provinceId = '',
+            paymentId = '', priceId = '', provinceId = '', specialtyId = '',
             selectedPayment = '', selectedPrice = '', selectedProvince = '',
-            selectedSpecialty = '', specialtyId = ''
+            selectedSpecialty = ''
             ;
 
             
@@ -191,7 +191,7 @@ class ManageDoctor extends Component {
                 paymentId = res.data.Doctor_Infor.paymentId;
                 priceId = res.data.Doctor_Infor.priceId;
                 provinceId = res.data.Doctor_Infor.provinceId;
-                specialtyId = res.data.Doctor_Infor.specialtyId
+                specialtyId = res.data.Doctor_Infor.specialtyId;
 
                 selectedPayment = listPayment.find(item => {
                     return item && item.value === paymentId
