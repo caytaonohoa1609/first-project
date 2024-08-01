@@ -18,7 +18,6 @@ class Specialty extends Component {
 
     async componentDidMount() {
         let res = await getAllSpecialty();
-        console.log('check res: ', res)
         if(res && res.errCode === 0) {
             this.setState({
                 dataSpecialty: res.data ? res.data : []
@@ -27,7 +26,9 @@ class Specialty extends Component {
     }
 
     handlViewDetailSpecialty = (item) => {
-        this.props.history.push(`/detail-specialty/${item.id}`)
+        if(this.props.history) {
+            this.props.history.push(`/detail-specialty/${item.id}`)
+        }
     }
 
     render() {

@@ -1,0 +1,21 @@
+.clinic-child {
+    cursor: pointer;
+
+    .bg-image .section-medical-facility{
+        height: 150px;
+        width: 278px;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-color: #eee !important;
+    }
+
+    .clinic-name {
+        padding: 10px 0;
+        text-align: center;
+
+        &:hover {
+            color: #45c3d2;
+        }
+    }
+}

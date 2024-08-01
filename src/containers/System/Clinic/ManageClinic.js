@@ -48,7 +48,6 @@ class ManageClinic extends Component {
             descriptionHTML: html,
             descriptionMarkdown: text,
         })
-        console.log('check state: ', this.state)
     }
 
     
@@ -76,7 +75,6 @@ class ManageClinic extends Component {
             })
         }else {
             toast.error('Something wrongs...')
-            console.log('>>> check res: ', res)
         }
     }
    

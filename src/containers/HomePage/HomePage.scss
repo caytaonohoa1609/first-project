@@ -71,9 +71,9 @@
             .bg-image {
                 height: 150px;
                 width: 278px;
-                background-position: center center;
-                background-repeat: no-repeat;
-                background-size: cover;
+                background-position: center center ;
+                background-repeat: no-repeat ;
+                background-size: cover ;
                 background-color: #eee;
 
                 &.section-specialty {
@@ -82,7 +82,7 @@
                 }
 
                 &.section-medical-facility {
-                    background-image: url('../../assets/medical-facility/benh-vien-thu-cuc.png');
+                    // background-image: url('../../assets/medical-facility/benh-vien-thu-cuc.png');
                     background-size: cover;
                 }
 

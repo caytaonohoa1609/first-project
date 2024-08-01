@@ -47,7 +47,6 @@ class ManageSpecialty extends Component {
             descriptionHTML: html,
             descriptionMarkdown: text,
         })
-        console.log('check state: ', this.state)
     }
 
     
@@ -74,7 +73,6 @@ class ManageSpecialty extends Component {
             })
         }else {
             toast.error('Something wrongs...')
-            console.log('>>> check res: ', res)
         }
     }
    
